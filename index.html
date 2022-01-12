@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Opening</title>
+<style>
+iframe {
+width: 70%;
+height: 800px;
+}
+</style>
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
+<body  style="background:#97c9ed">
+
+<!-- <p>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem IpLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.sum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</p> -->
+</div>
+<div style="text-align:center">
+   <!-- <iframe src="http://localhost/html/Anoop/No_Cell/dev_nocell_AWS/nocell_web/?email=admin@nocell.com&secret-key=admin@123" name="myFrame"></iframe> 
+     <p><a href="https://devapp.nocellmdm.com/" target="myFrame">Open devapp.nocellmdm.com</a></p> -->
+</div>
+
+
+
+
+<iframe id="frame" name="frame"></iframe>
+
+
+
+</div>
+
+<script type="text/javascript">
+
+var data = "token=5a4828985edcbdcf69f9adbf233a5c06";
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function() {
+  if(this.readyState === 4) {
+    console.log(this.responseText);
+    console.log(this.responseText.data.url);
+  var url = this.responseText.data.url;
+
+ $('#frame').attr('src', url);
+  }
+});
+
+xhr.open("POST", "https://devapp.nocellmdm.com/index.php");
+xhr.setRequestHeader("Authorization", "Basic Og==");
+xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+xhr.setRequestHeader("Access-Control-Allow-Origin", "*"),
+xhr.setRequestHeader("Cookie", "PHPSESSID=3ot24ojstsgoh2b0kcgpn4n7t9");
+
+xhr.send(data);
+
+
+// var settings = {
+//   "url": "https:devapp.nocellmdm.com/index.php",
+//   "method": "POST",
+//   "timeout": 0,
+//   "headers": {
+//     "Content-Type": "application/x-www-form-urlencoded",
+//     "Access-Control-Allow-Credentials": true,
+//     'Access-Control-Allow-Origin'  : '*', 
+   
+//   },
+//   "data": {
+//     "token": "06dd2cdb26080a3515a312c7a31dd907"
+//   }
+
+// };
+
+
+// $.ajax(settings).done(function (response) {
+//   console.log(response.data.url);
+//   var url = response.data.url;
+
+//  $('#frame').attr('src', url);
+// });
+
+/*
+var settings = {
+  "url": "http://localhost/html/Anoop/No_Cell/dev_nocell_AWS/nocell_web/index.php",
+  "method": "POST",
+  "timeout": 0,
+  "headers": {
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Cookie": "PHPSESSID=i8k9gtbcnc5g50lool82t657l6"
+  },
+  "data": {
+    "token": "9f90b36d7f46d340b292c1e325c5ba4b"
+    
+  }
+};
+
+$.ajax(settings).done(function (response) {
+    let res = JSON.parse(response);
+  console.log(res.data.url);
+  var url = res.data.url;
+
+ $('#frame').attr('src', url);
+});
+
+*/
+
+
+</script>
+</body>
+</html>
